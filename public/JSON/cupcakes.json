@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Raspberry cinnamon",
+    "price": 35,
+    "image": "/images/cupcakes/aneta-voborilova-4Cuz3ls1BCI-unsplash.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Chocolate fudge",
+    "price": 30,
+    "image": "/images/cupcakes/dessy-dimcheva-Uc9HyrJMQdI-unsplash.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Chocolate cherry",
+    "price": 32,
+    "image": "/images/cupcakes/dessy-dimcheva-zyMJwFBg8u8-unsplash.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chocolate caramell",
+    "price": 38,
+    "image": "/images/cupcakes/jr-r-90HdOlGbjck-unsplash.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Velvet",
+    "price": 34,
+    "image": "/images/cupcakes/luisana-zerpa-MJPr6nOdppw-unsplash.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Chocolate mint",
+    "price": 33,
+    "image": "/images/cupcakes/meritt-thomas-Ao09kk2ovB0-unsplash.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sprinkles",
+    "price": 36,
+    "image": "/images/cupcakes/sara-cervera-FAnSK-gVGZU-unsplash.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Buttercream fudge",
+    "price": 31,
+    "image": "/images/cupcakes/lore-schodts-FIxdY7jOBus-unsplash.jpg"
+  }
+]

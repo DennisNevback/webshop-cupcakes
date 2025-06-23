@@ -1,0 +1,50 @@
+[
+  {
+    "id": 9,
+    "name": "Buttercream blueberry",
+    "price": 35,
+    "image": "/images/cakes/alex-lvrs-On2VseHUDXw-unsplash.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Mixed berries",
+    "price": 30,
+    "image": "/images/cakes/christiann-koepke-AigxB1zfRVo-unsplash.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Pink sprinkles",
+    "price": 32,
+    "image": "/images/cakes/deva-williamson-ntfGWVbBiO0-unsplash.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Strawberry macaroons",
+    "price": 38,
+    "image": "/images/cakes/deva-williamson-tW0Ix_Ajg6Y-unsplash.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Chocolate berries",
+    "price": 34,
+    "image": "/images/cakes/jacob-thomas-6jHpcBPw7i8-unsplash.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Vanilla chocolate",
+    "price": 33,
+    "image": "/images/cakes/james-coleman-5HR1gItc7Gs-unsplash.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Chocolate fudge",
+    "price": 36,
+    "image": "/images/cakes/kaouther-djouada-hcEDfkiVmMI-unsplash.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Fresh figs",
+    "price": 31,
+    "image": "/images/cakes/melissa-walker-horn-4on47p0-bk4-unsplash.jpg"
+  }
+]
