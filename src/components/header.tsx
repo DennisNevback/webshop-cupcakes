@@ -41,7 +41,7 @@ function Header({ customerCart }) {
           </ul>
         )}
       </div>
-      <img src="/images/logo/dennisDesertLogo.png" alt="Logo" className="h-full" />
+      <Link to="/" className="h-full"> <img src="/images/logo/dennisDesertLogo.png" alt="Logo" className="h-full" /> </Link>
       <Link to="/checkout" className="flex pt-5">{customerCart.length} items</Link>
     </nav >
   )

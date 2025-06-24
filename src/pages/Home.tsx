@@ -3,7 +3,7 @@ function Home() {
 
   return (
     <>
-      <p>Home</p>
+      <div className="grid mb-10">Home</div>
     </>
   )
 }
