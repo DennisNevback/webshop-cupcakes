@@ -19,17 +19,19 @@ function App() {
   }
 
   return (
-    <Router>
-      <Header customerCart={cartItems} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products onAddToCart={addToCart} />} />
-        <Route path="/checkout" element={<Checkout customerCart={cartItems} />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="w-screen h-screen bg-gray-100">
+      <Router>
+        <Header customerCart={cartItems} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products onAddToCart={addToCart} />} />
+          <Route path="/checkout" element={<Checkout customerCart={cartItems} />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   )
 }
 

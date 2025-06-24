@@ -19,35 +19,37 @@ function Products({ onAddToCart }) {
       .catch((err) => console.error("Fel vid hämtning:", err))
   }, [])
 
-  return (
-    <div id="productWrapper">
+  const ProductList = ({ title, items }) => {
+    return (
+      <div className="grid mb-10">
+        <h2 className="justify-self-center text-2xl mb-3">{title}</h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {items.map((item) => (
+            <li key={item.id} className="relative bg-gray-100 text-white rounded overflow-hidden">
+              <img src={item.image} alt={item.name} className="w-full h-auto" />
 
-      <h2>Cupcakes</h2>
-      <div id="cupcakeContainer">
-        <ul>
-          {cupcakes.map((cupcake) => (
-            <li key={cupcake.id}>
-              <h3>{cupcake.name}</h3>
-              <p>Pris: {cupcake.price} kr</p>
-              <img src={cupcake.image} alt={cupcake.name} width="150" />
-              <button onClick={() => onAddToCart({ id: cupcake.id, name: cupcake.name, price: cupcake.price })}>Add to cart</button>
+              {/* Text-overlay ovanpå bilden */}
+              <div className="absolute top-0 left-0 p-2 bg-gradient-to-b from-black/70 to-transparent w-full">
+                <h3 className="text-lg">{item.name}</h3>
+                <p className="text-sm">Pris: {item.price} kr</p>
+              </div>
 
+              <button
+                className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 rounded cursor-pointer"
+                onClick={() => onAddToCart({ id: item.id, name: item.name, price: item.price })}
+              >
+                Add to cart
+              </button>
             </li>
           ))}
         </ul>
-      </div>
+      </div>)
+  };
 
-      <h2>Cakes</h2>
-      <div id="cakeContainer">
-        <ul>
-          {cakes.map(cake => (<li key={cake.id}>
-            <h3>{cake.name}</h3>
-            <p>Pris {cake.price} kr</p>
-            <img src={cake.image} alt={cake.name} width="150" />
-          </li>))}
-        </ul>
-      </div>
-
+  return (
+    <div className="bg-gray-100 mx-2">
+      <ProductList title="Cupcakes" items={cupcakes} />
+      <ProductList title="Cakes" items={cakes} />
     </div>
   )
 }
