@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import React, { useState } from 'react';
 function Header({ customerCart }) {
 
@@ -27,16 +27,16 @@ function Header({ customerCart }) {
         {isOpen && (
           <ul className="absolute flex flex-col items-center top-0 p-5 pt-20 left-0 z-50 w-80 h-full bg-black opacity-90 shadow-lg text-white space-y-5 text-xl">
             <li>
-              <Link to="/" onClick={handleClick}>Home</Link>
+              <NavLink to="/" onClick={handleClick}>Home</NavLink>
             </li>
             <li>
-              <Link to="/products" onClick={handleClick}>Products</Link>
+              <NavLink to="/products" onClick={handleClick}>Products</NavLink>
             </li>
             <li>
-              <Link to="/about" onClick={handleClick}>About</Link>
+              <NavLink to="/about" onClick={handleClick}>About</NavLink>
             </li>
             <li>
-              <Link to="/contact" onClick={handleClick}>Contact</Link>
+              <NavLink to="/contact" onClick={handleClick}>Contact</NavLink>
             </li>
           </ul>
         )}

@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-gray-100">
+    <div className="w-screen min-h-screen bg-gray-100 grid">
       <Router>
         <Header customerCart={cartItems} />
         <Routes>

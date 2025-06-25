@@ -25,8 +25,8 @@ function Products({ onAddToCart }) {
         <h2 className="justify-self-center text-2xl mb-3">{title}</h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {items.map((item) => (
-            <li key={item.id} className="relative bg-gray-100 text-white rounded overflow-hidden">
-              <img src={item.image} alt={item.name} className="w-full h-auto" />
+            <li key={item.id} className="relative bg-gray-200 text-white rounded overflow-hidden">
+              <img src={item.image} alt={item.name} className="h-full w-auto" />
 
               {/* Text-overlay ovanpå bilden */}
               <div className="absolute top-0 left-0 p-2 bg-gradient-to-b from-black/70 to-transparent w-full">
