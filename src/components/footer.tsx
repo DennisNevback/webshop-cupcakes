@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom"
 function Footer() {
 
   return (
     <div className="sm:flex w-full bg-gray-200 justify-center content-start">
-      <div className='self-end relative flex h-35  content-center p-1 text-sm color-white sm:w-1/2 lg:w-1/4' >
+      <div className='self-end relative flex h-35  content-center p-1 text-sm color-white sm:w-1/2 md:w-1/2 xl:w-1/4' >
         <img src="/images/logo/dennisDesertLogo.png" alt="Dennis Desert" className="h-1/2 absolute top-8 left-2" />
         <span className="flex flex-col justify-center content-center self-center space-x-12 ml-20">
           <span className="content-center">
@@ -13,7 +12,7 @@ function Footer() {
           </span>
           <span className="content-center">
             <p>Kontakt:</p>
-            <p><a href="mailto:fake_email@bakesalot.com">fake_email@bakesalot.com</a></p>
+            <p><a href="mailto:fake_email@bake.com">fake_email@bake.com</a></p>
             <p>070 000 00 000</p>
           </span>
         </span>

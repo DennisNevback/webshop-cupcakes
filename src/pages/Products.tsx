@@ -36,7 +36,7 @@ function Products({ onAddToCart }) {
 
               <button
                 className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-1 rounded cursor-pointer"
-                onClick={() => onAddToCart({ id: item.id, name: item.name, price: item.price })}
+                onClick={() => onAddToCart({ id: item.id, name: item.name, price: item.price, image: item.image })}
               >
                 Add to cart
               </button>
