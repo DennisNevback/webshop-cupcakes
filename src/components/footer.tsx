@@ -1,8 +1,8 @@
 function Footer() {
 
   return (
-    <div className="sm:flex w-full bg-gray-200 justify-center content-start">
-      <div className='self-end relative flex h-35  content-center p-1 text-sm color-white sm:w-1/2 md:w-1/2 xl:w-1/4' >
+    <div className="flex flex-col w-full h-40 bg-gray-200 justify-end items-center self-end">
+      <div className='flex relative h-35  content-center p-1 text-sm color-white w-full sm:w-full md:w-1/2 xl:w-1/3 2xl:w-1/4' >
         <img src="/images/logo/dennisDesertLogo.png" alt="Dennis Desert" className="h-1/2 absolute top-8 left-2" />
         <span className="flex flex-col justify-center content-center self-center space-x-12 ml-20">
           <span className="content-center">

@@ -13,10 +13,21 @@ function App() {
 
   const [cartItems, setCartItems] = useState([])
 
-  const addToCart = (item: object) => {
-    setCartItems(prev => [...prev, item])
-    console.log("item added!")
-  }
+  const addToCart = (newItem) => {
+    setCartItems(prevCart => {
+      const existingItem = prevCart.find(item => item.id === newItem.id);
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.id === newItem.id
+            ? { ...item, amount: item.amount + 1 }
+            : item
+        );
+      } else {
+        return [...prevCart, newItem];
+      }
+    });
+  };
+
 
   return (
     <div className="w-screen min-h-screen bg-gray-100 grid">
@@ -27,7 +38,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products onAddToCart={addToCart} />} />
-          <Route path="/checkout" element={<Checkout customerCart={cartItems} />} />
+          <Route path="/checkout" element={<Checkout customerCart={cartItems} setCustomerCart={setCartItems} />} />
         </Routes>
         <Footer />
       </Router>
