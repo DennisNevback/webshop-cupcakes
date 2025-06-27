@@ -56,25 +56,25 @@ function Checkout({ customerCart, setCustomerCart }) {
 
 
   return (
-    <div className='flex flex-col p-2 justify-center'>
-      <div className='h-full flex flex-col space-y-2'>
+    <div className='flex flex-col px-3 md:px-7 xl:px-20 2xl:px-80 justify-center'>
+      <div className='h-full flex flex-col space-y-2 md:w-1/2 xl:w-1/3 2xl:w-1/3'>
         {customerCart.map(item => (
-          <div key={item.id} className='flex w-full space-x-5 justify-center '>
+          <div key={item.id} className='flex w-full space-x-5'>
             <img src={item.image} alt="" className='w-1/3 rounded-sm' />
             <div className='w-1/2 space-y-1.5 pt-3'>
               <p>{item.name}</p>
               <p>{item.price} kr/st</p>
               <div className='flex space-x-2'>
-                <button onClick={() => removeItem(item.id)}>-</button>
+                <button className='cursor-pointer px-2' onClick={() => removeItem(item.id)}>-</button>
                 <p>antal: {item.amount}</p>
-                <button onClick={() => addItem(item.id)}>+</button>
-                <button onClick={() => removeAll(item.id)}>REMOVE ALL</button>
+                <button className='cursor-pointer' onClick={() => addItem(item.id)}>+</button>
+                <button className='cursor-pointer px-2' onClick={() => removeAll(item.id)}><img src="/images/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" /></button>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <p className='pl-5 mt-5'>total price: {totalPrice} kr</p>
+      <p className='mt-5'>total price: {totalPrice} kr</p>
       <button className='flex self-center m-8 px-4 py-3 rounded-sm bg-green-500 text-amber-50'>Till kassan</button>
     </div>
   )
