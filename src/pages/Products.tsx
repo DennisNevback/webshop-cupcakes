@@ -2,10 +2,29 @@ import { useEffect, useState } from "react"
 import cupcakeData from '../JSON/cupcakes.json'
 import cakeData from '../JSON/cakes.json'
 
-function Products({ onAddToCart }) {
+type CartItem = {
+  id: number
+  name: string,
+  price: number,
+  image: string,
+  amount: number
+}
 
-  const [cupcakes, setCupcakes] = useState([])
-  const [cakes, setCakes] = useState([])
+type Product = Omit<CartItem, 'amount'>
+
+interface CartItems {
+  onAddToCart: (item: CartItem) => void
+}
+
+interface ProductListItems {
+  title: string,
+  items: Product[]
+}
+
+function Products({ onAddToCart }: CartItems) {
+
+  const [cupcakes, setCupcakes] = useState<Product[]>([])
+  const [cakes, setCakes] = useState<Product[]>([])
 
   useEffect(() => {
     setCupcakes(cupcakeData)
@@ -17,7 +36,7 @@ function Products({ onAddToCart }) {
 
   console.log(cupcakes)
 
-  const ProductList = ({ title, items }) => {
+  const ProductList = ({ title, items }: ProductListItems) => {
     return (
       <div className="grid mb-10">
         <h2 className="justify-self-center text-2xl mb-3">{title}</h2>

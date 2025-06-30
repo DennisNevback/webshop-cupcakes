@@ -9,11 +9,21 @@ import Products from "./pages/Products.tsx"
 import Checkout from "./pages/Checkout.tsx"
 import { useEffect, useState } from "react"
 
+
+type CartItem = {
+  id: number,
+  name: string,
+  price: number,
+  image: string
+  amount: number
+}
+
+
 function App() {
 
-  const [cartItems, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState<CartItem[]>([])
 
-  const addToCart = (newItem) => {
+  const addToCart = (newItem: CartItem) => {
     setCartItems(prevCart => {
       const existingItem = prevCart.find(item => item.id === newItem.id);
       if (existingItem) {

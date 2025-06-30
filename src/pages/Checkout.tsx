@@ -1,8 +1,20 @@
 import { useEffect, useState } from 'react';
-import Button from 'react'
+
+type CartItem = {
+  id: number,
+  name: string,
+  price: number,
+  image: string
+  amount: number
+}
+
+interface CheckoutProps {
+  customerCart: CartItem[]
+  setCustomerCart: React.Dispatch<React.SetStateAction<CartItem[]>>
+}
 
 
-function Checkout({ customerCart, setCustomerCart }) {
+function Checkout({ customerCart, setCustomerCart }: CheckoutProps) {
 
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -18,7 +30,7 @@ function Checkout({ customerCart, setCustomerCart }) {
 
 
   //remove single item from shopping cart
-  const removeItem = (itemId) => {
+  const removeItem = (itemId: number) => {
     console.log('remove item')
     const customerCartNew = customerCart.map(item => {
       if (itemId === item.id) {
@@ -35,7 +47,7 @@ function Checkout({ customerCart, setCustomerCart }) {
   }
 
   //add single item from shopping cart
-  const addItem = (itemId) => {
+  const addItem = (itemId: number) => {
     console.log('add item')
     const customerCartNew = customerCart.map(item => {
       if (itemId === item.id) {
@@ -49,7 +61,7 @@ function Checkout({ customerCart, setCustomerCart }) {
   }
 
   //remove all from cart
-  const removeAll = (itemId) => {
+  const removeAll = (itemId: number) => {
     const customerCartNew = customerCart.filter(item => item.id !== itemId)
     setCustomerCart(customerCartNew)
   }

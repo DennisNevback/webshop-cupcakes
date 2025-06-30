@@ -3,15 +3,27 @@ import { useState, useEffect } from 'react';
 import { Spin as Hamburger } from 'hamburger-react'
 
 
+type CartItem = {
+  id: number
+  name: string
+  price: number
+  image: string
+  amount: number
+}
 
-function Header({ customerCart }) {
+interface HeaderProps {
+  customerCart: CartItem[]
+}
+
+
+function Header({ customerCart }: HeaderProps) {
 
   const [isOpen, setOpen] = useState(false)
   const [cartAmount, setCartAmount] = useState(0)
 
 
   //for hamburgermenu
-  const toggleOpen = (isOpen) => {
+  const toggleOpen = () => {
     setOpen(!isOpen)
   }
 
@@ -47,8 +59,8 @@ function Header({ customerCart }) {
           </ul>
         )}
       </div>
-      <Link to="/webshop-cupcakes/" className="h-full"> <img src="./images/logo/dennisDesertLogo.png" alt="Logo" className="h-full" onClick={toggleOpen} /> </Link>
-      <Link to="/webshop-cupcakes/checkout" onClick={toggleOpen} className="flex flex-col relative h-1/2 justify-center mr-3 mt-1 hover:cursor-pointer">
+      <Link to="/webshop-cupcakes/" className="h-full"> <img src="./images/logo/dennisDesertLogo.png" alt="Logo" className="h-full" onClick={() => isOpen && toggleOpen()} /> </Link>
+      <Link to="/webshop-cupcakes/checkout" onClick={() => isOpen && toggleOpen()} className="flex flex-col relative h-1/2 justify-center mr-3 mt-1 hover:cursor-pointer">
         <p className="absolute right-0 top-0 z-2 bg-amber-300 px-1 rounded-xl shadow-md">{cartAmount}</p>
         <img src="./images/icons/shopping_cart_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" className="h-1/2 mr-2 mt-1" />
       </Link>
