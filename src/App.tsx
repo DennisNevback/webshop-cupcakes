@@ -7,7 +7,7 @@ import Contact from "./pages/Contact.tsx"
 import About from "./pages/About.tsx"
 import Products from "./pages/Products.tsx"
 import Checkout from "./pages/Checkout.tsx"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 
 type CartItem = {
