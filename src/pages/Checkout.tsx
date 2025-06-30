@@ -68,7 +68,7 @@ function Checkout({ customerCart, setCustomerCart }) {
                 <button className='cursor-pointer px-2' onClick={() => removeItem(item.id)}>-</button>
                 <p>antal: {item.amount}</p>
                 <button className='cursor-pointer' onClick={() => addItem(item.id)}>+</button>
-                <button className='cursor-pointer px-2' onClick={() => removeAll(item.id)}><img src="/images/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" /></button>
+                <button className='cursor-pointer px-2' onClick={() => removeAll(item.id)}><img src="./images/icons/delete_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="" /></button>
               </div>
             </div>
           </div>

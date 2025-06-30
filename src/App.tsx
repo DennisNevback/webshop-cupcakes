@@ -34,11 +34,11 @@ function App() {
       <Router>
         <Header customerCart={cartItems} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products onAddToCart={addToCart} />} />
-          <Route path="/checkout" element={<Checkout customerCart={cartItems} setCustomerCart={setCartItems} />} />
+          <Route path="/webshop-cupcakes/" element={<Home />} />
+          <Route path="/webshop-cupcakes/contact" element={<Contact />} />
+          <Route path="/webshop-cupcakes/about" element={<About />} />
+          <Route path="/webshop-cupcakes/products" element={<Products onAddToCart={addToCart} />} />
+          <Route path="/webshop-cupcakes/checkout" element={<Checkout customerCart={cartItems} setCustomerCart={setCartItems} />} />
         </Routes>
         <Footer />
       </Router>

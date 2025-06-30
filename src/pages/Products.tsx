@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import cupcakeData from '../JSON/cupcakes.json'
+import cakeData from '../JSON/cakes.json'
 
 function Products({ onAddToCart }) {
 
@@ -6,18 +8,14 @@ function Products({ onAddToCart }) {
   const [cakes, setCakes] = useState([])
 
   useEffect(() => {
-    fetch("/JSON/cupcakes.json")
-      .then((res) => res.json())
-      .then((data) => setCupcakes(data))
-      .catch((err) => console.error("Fel vid hämtning:", err))
+    setCupcakes(cupcakeData)
   }, [])
 
   useEffect(() => {
-    fetch("/JSON/cakes.json")
-      .then((res) => res.json())
-      .then((data) => setCakes(data))
-      .catch((err) => console.error("Fel vid hämtning:", err))
+    setCakes(cakeData)
   }, [])
+
+  console.log(cupcakes)
 
   const ProductList = ({ title, items }) => {
     return (
